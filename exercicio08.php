@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,45 +10,57 @@
 </head>
  
 <body>
- <h1>Imprimir os valores negativos</h1>
-    <?php include('funcoes.php')
-    ?>
-   
-    <form class ="form-control" method ="POST">
+    <h1>Votos brancos, nulos e válidos</h1>
+    
+    <?php
+    include('funcoes.php');
+    $resultado = '';
 
+    if (isset($_POST['brancos']) && isset($_POST['validos']) && isset($_POST['nulos']) && isset($_POST['eleitores'])) {
+        $tBrancos = $_POST['brancos'];
+        $tValidos = $_POST['validos'];
+        $tNulos = $_POST['nulos'];
+        $tEleitores = $_POST['eleitores'];
+
+
+        $resultado = exercicio07($tBrancos, $tValidos, $tNulos, $tEleitores);
+    }
+?>
+
+    <form class="form-control" method="POST">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Digite um número:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero" placeholder="Digite o número">
+            <label for="brancos" class="form-label">Votos Brancos:</label>
+            <input type="number" class="form-control" id="brancos" name="brancos" placeholder="Digite o número de votos brancos" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="validos" class="form-label">Votos Válidos:</label>
+            <input type="number" class="form-control" id="validos" name="validos" placeholder="Digite o número de votos válidos" required>
         </div>
 
- 
-        <br><br>
-        <button type="submit" class="btn btn-primary">Calcular
-            <?php
-            //coletando os numeros dos campos
-            if (isset($_POST['numero']) && $_POST['numero'] != "") {
-                $num1 = $_POST['numero'];
+        <div class="mb-3">
+            <label for="nulos" class="form-label">Votos Nulos:</label>
+            <input type="number" class="form-control" id="nulos" name="nulos" placeholder="Digite o número de votos nulos" required>
+        </div>
 
-            }
-         
-           
-            ?>
-        </button>
-        <br><br>
+        <div class="mb-3">
+            <label for="eleitores" class="form-label">Total de Eleitores:</label>
+            <input type="number" class="form-control" id="eleitores" name="eleitores" placeholder="Digite o total de eleitores" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Calcular</button>
     </form>
- 
+    
+    <br><br>
+
     <div class="form-control">
-        <label for="exampleFormControlTextarea1" class="form-label">Resultado:</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" readonly>
-            <?php
-            
-            
-            ?>
+        <label for="resultado" class="form-label">Resultado:</label>
+        <textarea class="form-control" id="resultado" rows="10" readonly>
+            <?php echo $resultado; ?>
         </textarea>
     </div>
-    <button class="btn btn-primary"><a style="color:#000;text-decoration: none;" href="menu.php" >Voltar</a></button>            
- 
- 
+
+    <br><br>
+    <button class="btn btn-primary"><a style="color:#000;text-decoration: none;" href="menu.php">Voltar</a></button>            
 </body>
 </html>
- 

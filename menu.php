@@ -30,6 +30,16 @@
     <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio18.php">Exércicio 18 </button><br><br>
     <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio19.php">Exércicio 19 </button> 
     <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio20.php">Exércicio 20 </button><br><br>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio21.php">Exércicio 21 </button>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio22.php">Exércicio 22 </button><br><br>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio23.php">Exércicio 23 </button>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio24.php">Exércicio 24 </button><br><br>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio25.php">Exércicio 25 </button>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio26.php">Exércicio 26 </button><br><br>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio27.php">Exércicio 27 </button>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio28.php">Exércicio 28 </button><br><br>
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio29.php">Exércicio 29 </button> 
+    <button class="btn btn-primary"><a style="color: #000;text-decoration: none;" href="exercicio30.php">Exércicio 30 </button><br><br>
 
 
 
