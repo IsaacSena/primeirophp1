@@ -34,10 +34,11 @@
         <br><br>
         <button type="submit" class="btn btn-primary">Calcular
             <?php
-            //coletando os numeros dos campos
+            if (isset($_POST['primeiraNota']) && $_POST['primeiraNota'] != "" && isset($_POST['segundaNota']) && $_POST['segundaNota'] != ""  && isset($_POST['terceiraNota']) && $_POST['terceiraNota'] != ""){
             $num1 = $_POST['primeiraNota'];
             $num2 = $_POST['segundaNota'];
             $num3 = $_POST['terceiraNota'];
+            }
                 ?>
         </button>
         <br><br>

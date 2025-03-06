@@ -70,7 +70,7 @@
         <button type="submit" class="btn btn-primary">Calcular
             <?php
             //coletando os numeros dos campos
-            
+            if (isset($_POST['numero1']) && $_POST['numero1'] != "" && isset($_POST['numero2']) && $_POST['numero2'] != ""  && isset($_POST['numero3']) && $_POST['numero3'] != "" && isset($_POST['numero4']) && $_POST['numero4'] != "" && isset($_POST['numero5']) && $_POST['numero5'] != "" && isset($_POST['numero6']) && $_POST['numero6'] != "" && isset($_POST['numero7']) && $_POST['numero7'] != "" && isset($_POST['numero8']) && $_POST['numero8'] != "" && isset($_POST['numero9']) && $_POST['numero9'] != "" && isset($_POST['numero10']) && $_POST['numero10'] != "") {
 
                 $num1 = $_POST['numero1'];
                 $num2 = $_POST['numero2'];
@@ -82,6 +82,7 @@
                 $num8 = $_POST['numero8'];
                 $num9 = $_POST['numero9'];
                 $num10 = $_POST['numero10'];
+            }
             ?>
         </button>
         <br><br>

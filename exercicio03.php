@@ -30,11 +30,11 @@
         <button type="submit" class="btn btn-primary">Calcular
             <?php
             //coletando os numeros dos campos
-            if (isset($_POST['primeiroNumero']) && isset($_POST['segundoNumero']) && $_POST['primieroNumero']) {
-                
+            if (isset($_POST['primeiroNumero']) && $_POST['primeiroNumero']!= "" && isset($_POST['segundoNumero']) && $_POST['segundoNumero'] != "") {
+                $num1 = $_POST['primeiroNumero'];
+                $num2 = $_POST['segundoNumero'];
             }
-            $num1 = $_POST['primeiroNumero'];
-            $num2 = $_POST['segundoNumero'];
+            
                 ?>
         </button>
         <br><br>

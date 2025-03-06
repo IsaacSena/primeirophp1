@@ -235,35 +235,51 @@ function exercicio28($num1) {
     
 }
 
+function exercicio25($num1,$num2,$num3){
+    if ($num1 > $num2 && $num1 > $num3) {
+        return $num1;
+    }elseif ($num2 > $num1 && $num2 > $num3) {
+        return $num2;
+    }elseif ($num3 > $num1 && $num3 > $num2) {
+        return $num3;
+    }
+}
 
+function exercicio22($num1,$num2,$num3,$num4,$num5){
+    
+    if ($num1 > $num2 && $num1 > $num3 && $num1 > $num4 && $num1 > $num5) {
+        return "Maior número " . $num1;
+    }elseif ($num2 > $num1 && $num2 > $num3 && $num2 > $num4 && $num2 > $num5) {
+        return "Maior número " . $num2;
+    }elseif ($num3 > $num1 && $num3 > $num2 && $num3 > $num4 && $num3 > $num5) {
+        return "Maior número " . $num3;
+    }elseif ($num4 > $num1 && $num4 > $num2 && $num4 > $num3 && $num4 > $num5) {
+        return "Maior número " . $num4;
+    }elseif ($num5 > $num1 && $num5 > $num2 && $num5 > $num3 && $num5 > $num4) {
+        return "Maior número " . $num5;
+}
+}
 
+function exercicio22media($num1,$num2,$num3,$num4,$num5){
+    return "Média dos números " . ($num1 + $num2 + $num3 + $num4 + $num5) / 5;
+}
 
+function exercicio30($num1,$num2){
+    $litros_usados = 0;
+    $distancia = 0;
+    $distancia = $num1 * $num2;
+    $litros_usados = $distancia / 12;
 
+    return "\nVelocidade média " . $num2 . "Km"  . "\nTempo gasto na viagem " . $num1. "Horas" . "\nDistancia percorrida " . $distancia . "Km" . "\nLitros Usados " . $litros_usados;
+}
 
+function exercicio27($ht,$vh,$pd){
+    $sb = $ht * $vh;
+    $td = ($pd/100) * $sb;
+    $sl = $sb - $td;
 
+    return "\nHoras trabalhadas " . $ht . " Horas" . "\nSalário bruto " . $sb . " Reais" . "\nDesconto " . $td . " Reais" . "\nSalário liquido " . $sl . " Reais";
+}
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
-

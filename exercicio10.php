@@ -33,10 +33,11 @@
         <br><br>
         <button type="submit" class="btn btn-primary">Calcular
             <?php
-            //coletando os numeros dos campos
+            if (isset($_POST['valorCarro']) && $_POST['valorCarro'] != "" && isset($_POST['primeriaPorcentagem']) && $_POST['primeriaPorcentagem'] != ""  && isset($_POST['segundaPorcentagem']) && $_POST['segundaPorcentagem'] != ""){
             $num1 = $_POST['valorCarro'];
             $num2 = $_POST['primeiraPorcentagem'];
             $num3 = $_POST['segundaPorcentagem'];
+            }
                 ?>
         </button>
         <br><br>

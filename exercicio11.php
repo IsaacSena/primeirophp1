@@ -38,11 +38,12 @@
         <br><br>
         <button type="submit" class="btn btn-primary">Calcular
             <?php
-            //coletando os numeros dos campos
+            if (isset($_POST['salario']) && $_POST['salario'] != "" && isset($_POST['quantidadeCarros']) && $_POST['quantidadeCarros'] != ""  && isset($_POST['vendas']) && $_POST['vendas'] != "" && isset($_POST['comissao']) && $_POST['comissao'] != ""){
             $num1 = $_POST['salario'];
             $num2 = $_POST['quantidadeCarros'];
             $num3 = $_POST['vendas'];
-            $num4 = $_POST['comissao'];            
+            $num4 = $_POST['comissao'];
+            }           
             ?>
         </button>
         <br><br>

@@ -28,9 +28,10 @@
         <br><br>
         <button type="submit" class="btn btn-primary">Calcular
             <?php
-            //coletando os numeros dos campos
+            if (isset($_POST['salario']) && $_POST['salario'] != "" && isset($_POST['reajuste']) && $_POST['reajuste'] != ""){
             $num1 = $_POST['salario'];
             $num2 = $_POST['reajuste'];
+            }
                 ?>
         </button>
         <br><br>

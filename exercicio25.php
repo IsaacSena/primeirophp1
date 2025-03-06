@@ -10,41 +10,74 @@
  
 <body>
  <h1>Pesquisa entre os habitantes</h1>
-    <?php include('funcoes.php')
-    ?>
+    <?php include('funcoes.php')?>
    
     <form class ="form-control" method ="POST">
 
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Salário:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero1" placeholder="Até três salários minímos">
+            <label for="exampleFormControlInput1" class="form-label">Primeiro Habitante</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero1" placeholder="Digite o nome do habitante">
         </div>
         
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Salário:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero2" placeholder="Até dez salários minímos">
+            <label for="exampleFormControlInput1" class="form-label">Salário</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero2" placeholder="Digite o salário">
         </div>
 
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Salário:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero3" placeholder="Até vinte salários minímos">
+            <label for="exampleFormControlInput1" class="form-label">Filhos</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero3" placeholder="Digite a quantidade de filhos">
+        </div><br><br>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Segundo Habitante</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero4" placeholder="Digite o nome do habitante">
         </div>
 
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Salário:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero4" placeholder="Demais funcionários">
+            <label for="exampleFormControlInput1" class="form-label">Salário</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero5" placeholder="Digite o salário">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Filhos</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero6" placeholder="Digite a quantidade de filhos">
+        </div><br><br>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Terceiro Habitante</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero7" placeholder="Digite o nome do habitante">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Salário</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero8" placeholder="Digite o salário">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Filhos</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero9" placeholder="Digite a quantidade de filhos">
         </div>
 
         <br><br>
         <button type="submit" class="btn btn-primary">Calcular
             <?php
             //coletando os numeros dos campos
-            
-                
+            if (isset($_POST['numero1']) && $_POST['numero1'] != "" && isset($_POST['numero2']) && $_POST['numero2'] != ""  && isset($_POST['numero3']) && $_POST['numero3'] != "" && isset($_POST['numero4']) && $_POST['numero4'] != "" && isset($_POST['numero5']) && $_POST['numero5'] != "" && isset($_POST['numero6']) && $_POST['numero6'] != "" && isset($_POST['numero7']) && $_POST['numero7'] != "" && isset($_POST['numero8']) && $_POST['numero8'] != "" && isset($_POST['numero9']) && $_POST['numero9'] != "") {
+
                 $num1 = $_POST['numero1'];
                 $num2 = $_POST['numero2'];
                 $num3 = $_POST['numero3'];
+
                 $num4 = $_POST['numero4'];
+                $num5 = $_POST['numero5'];
+                $num6 = $_POST['numero6'];
+
+                $num7 = $_POST['numero7'];
+                $num8 = $_POST['numero8'];
+                $num9 = $_POST['numero9'];
+            }
+                
             
             ?>
         </button>
@@ -56,6 +89,9 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" readonly>
             <?php
 
+        echo "\nMédia salarial da população " . calcularmedia($num2,$num5,$num8);
+        echo "\nMédia de filhos " . calcularmedia($num3,$num6,$num9);
+        echo "\nMaior salário da população " . exercicio25($num2,$num5,$num8);
           
             ?>
         </textarea>

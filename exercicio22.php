@@ -9,35 +9,64 @@
 </head>
  
 <body>
- <h1>Digite a quantidade de vezes que deseja</h1>
+ <h1>Soma e média</h1>
     <?php include('funcoes.php')
     ?>
    
     <form class ="form-control" method ="POST">
     
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Quantidade de números:</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero1" placeholder="Quantas vezes deseja digitar">
+            <label for="exampleFormControlInput1" class="form-label">Digite um número</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero1" placeholder="0 a 10">
         </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite um número</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero2" placeholder="0 a 10">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite um número</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero3" placeholder="0 a 10">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite um número</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero4" placeholder="0 a 10">
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Digite um número</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="numero5" placeholder="0 a 10">
+        </div>
+
 
         <?php
 
-    $num1 = $_POST['numero1'];
+       
 
-    for ($i = 0; $i < $num1; $i++) {
+   /* for ($i = 0; $i < $num1; $i++) {
     echo '<div class="mb-3">';
     echo '<label for="campo' . $i . '" class="form-label">Campo ' . ($i + 1) . ':</label>';
     echo '<input type="text" class="form-control" id="campo' . $i . '" name="campo' . $i . '" placeholder="Digite a nota">';
     echo '</div>';
-    }
-    ?>
+    }*/
+         ?>
 
         
         <br><br>
         <button type="submit" class="btn btn-primary">Calcular
             <?php
 
-          
+        if (isset($_POST['numero1']) && $_POST['numero1'] != "" && isset($_POST['numero2']) && $_POST['numero2'] != ""  && isset($_POST['numero3']) && $_POST['numero3'] != "" && isset($_POST['numero4']) && $_POST['numero4'] != "" && isset($_POST['numero5']) && $_POST['numero5'] != "") {
+
+            $num1 = $_POST['numero1'];
+            $num2 = $_POST['numero2'];
+            $num3 = $_POST['numero3'];
+            $num4 = $_POST['numero4'];
+            $num5 = $_POST['numero5'];
+       
+        }
 
 
             ?>
@@ -51,8 +80,8 @@
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" readonly>
             <?php
 
-         
-            
+        echo "\n" . exercicio22($num1,$num2,$num3,$num4,$num5);
+        echo "\n" . exercicio22media($num1,$num2,$num3,$num4,$num5);
             ?>
         </textarea>
     </div>

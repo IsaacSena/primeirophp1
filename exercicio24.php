@@ -40,11 +40,12 @@
             <?php
             //coletando os numeros dos campos
             
-                
+                if (isset($_POST['numero1']) && $_POST['numero1'] != "" && isset($_POST['numero2']) && $_POST['numero2'] != ""  && isset($_POST['numero3']) && $_POST['numero3'] != "" && isset($_POST['numero4']) && $_POST['numero4'] != ""){
                 $num1 = $_POST['numero1'];
                 $num2 = $_POST['numero2'];
                 $num3 = $_POST['numero3'];
                 $num4 = $_POST['numero4'];
+                }
             
             ?>
         </button>

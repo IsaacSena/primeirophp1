@@ -9,7 +9,7 @@
 </head>
  
 <body>
- <h1>Comversão de temperatura</h1>
+ <h1>Conversão de temperatura</h1>
     <?php include('funcoes.php')
     ?>
    
@@ -25,8 +25,10 @@
         <button type="submit" class="btn btn-primary">Calcular
             <?php
             //coletando os numeros dos campos
-
-                $num1 = $_POST['numero1'];
+                if (isset($_POST['numero1']) && $_POST['numero1'] != "") {
+                    $num1 = $_POST['numero1'];
+                }
+                
             
             ?>
         </button>

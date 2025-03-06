@@ -30,7 +30,7 @@
     <form class="form-control" method="POST">
         <div class="mb-3">
             <label for="brancos" class="form-label">Votos Brancos:</label>
-            <input type="number" class="form-control" id="brancos" name="brancos" placeholder="Digite o número de votos brancos" required>
+            <input type="number" class="form-control" id="brancos" name="brancos" placeholder="Digite o número de votos brancos" require>
         </div>
         
         <div class="mb-3">
